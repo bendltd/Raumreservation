@@ -1,0 +1,64 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<link rel="stylesheet" href="style.css" type="text/css"></link>
+</h:head>
+
+<h:body>
+
+	<h:form>
+		<p:tabMenu activeIndex="0">
+			<p:menuitem value="Neue Buchung" icon="ui-icon-plusthick" />
+			<p:menuitem value="Buchung bearbeiten" icon="ui-icon-gear" />
+			<p:menuitem value="Historie" icon="ui-icon-script" />
+			<p:menuitem value="Anleitung" icon="ui-icon-help" />
+		</p:tabMenu>
+	</h:form>
+
+	<h1>Raumreservation test Git</h1>
+
+	<h:form id="form">
+		<p:growl id="msgs" showDetail="true" />
+
+		<h:panelGrid columns="2" cellpadding="5">
+			<p:outputLabel for="datetime" value="Datum:" />
+			<p:calendar id="datetime" value="#{calendarView.date10}"
+				pattern="MM/dd/yyyy HH:mm" />
+
+
+
+			<p:outputLabel for="raumart" value="Raumart:" />
+			<p:selectOneMenu id="raumart" value="#{selectOneMenuView.raumart}"
+				style="width:250px">
+				<f:selectItem itemLabel="Bitte wählen" itemValue="" />
+				<f:selectItem itemLabel="Sitzungszimmer (Meeting)"
+					itemValue="Sitzungszimmer (Meeting)" />
+				<f:selectItem itemLabel="Showroom" itemValue="Showroom" />
+				<f:selectItem itemLabel="Veranstaltungsraum"
+					itemValue="Veranstaltungsraum" />
+				<f:selectItem itemLabel="buchbare Arbeitsräume"
+					itemValue="buchbare Arbeitsräume" />
+				<f:selectItem itemLabel="Aula" itemValue="Aula" />
+			</p:selectOneMenu>
+
+			<p:outputLabel for="raumgroesse" value="Raumgrösse:" />
+			<p:selectOneMenu id="raumgroesse"
+				value="#{selectOneMenuView.raumgroesse}" style="width:250px">
+				<f:selectItem itemLabel="Bitte wählen" itemValue="" />
+				<f:selectItem itemLabel="1-5 Personen" itemValue="1-5 Personen" />
+				<f:selectItem itemLabel="5-10 Personen" itemValue="5-10 Personen" />
+				<f:selectItem itemLabel="10-15 Personen" itemValue="10-15 Personen" />
+				<f:selectItem itemLabel="15-20 Personen" itemValue="15-20 Personen" />
+				<f:selectItem itemLabel="20+ Personen" itemValue="20+ Personen" />
+			</p:selectOneMenu>
+		</h:panelGrid>
+
+
+		<p:commandButton value="verfügbare Räume anzeigen" />
+	</h:form>
+
+</h:body>
+</html>
