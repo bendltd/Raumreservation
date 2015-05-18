@@ -9,12 +9,35 @@
 
 <h:body>
 
+	<p:tabMenu activeIndex="#{param.i}">
+    <p:menuitem value="Overview" outcome="/ui/menu/tabMenu">
+        <f:param name="i" value="0" />
+    </p:menuitem>
+    
+    <!-- 
+    <p:menuitem value="Demos" outcome="/ui/menu/tabMenu" icon="ui-icon-search">
+        <f:param name="i" value="1" />
+    </p:menuitem>
+    <p:menuitem value="Documentation" outcome="/ui/menu/tabMenu" icon="ui-icon-document">
+        <f:param name="i" value="2" />
+    </p:menuitem>
+    <p:menuitem value="Support" outcome="/ui/menu/tabMenu" icon="ui-icon-wrench">
+        <f:param name="i" value="3" />
+    </p:menuitem>
+    <p:menuitem value="Social" outcome="/ui/menu/tabMenu" icon="ui-icon-person">
+        <f:param name="i" value="4" />
+    </p:menuitem>
+     -->
+</p:tabMenu>
+
+<!-- 
 	<p:breadCrumb>
 		<p:menuitem value="Neue Buchung" url="#" />
 		<p:menuitem value="Buchung bearbeiten" url="#" />
 		<p:menuitem value="Historie" url="#" />
+		<p:menuitem value="Anleitung" url="#" />
 	</p:breadCrumb>
-
+-->
 	<h1>Raumreservation test Git</h1>
 
 	<h:form id="form">
@@ -47,6 +70,7 @@
             <f:selectItem itemLabel="20+ Personen" itemValue="20+ Personen" />
         </p:selectOneMenu>
 </h:panelGrid>
+
 
 	<p:commandButton value="verfügbare Räume anzeigen" />
 	</h:form>
