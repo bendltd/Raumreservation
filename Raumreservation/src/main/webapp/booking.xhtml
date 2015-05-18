@@ -14,10 +14,10 @@
 
 	<h:form>
 		<p:tabMenu activeIndex="0">
-			<p:menuitem value="Neue Buchung" icon="fa fa-bed" />
-			<p:menuitem value="Buchung bearbeiten" icon="ui-icon-gear" />
-			<p:menuitem value="Historie" icon="ui-icon-script" />
-			<p:menuitem value="Anleitung" icon="ui-icon-help" />
+			<p:menuitem value="Neue Buchung" onclick="window.location.href='booking.xhtml'" icon="fa fa-bed" />
+			<p:menuitem value="Buchung bearbeiten"  onclick="window.location.href='#'" icon="ui-icon-gear" />
+			<p:menuitem value="Historie" onclick="window.location.href='#'" icon="ui-icon-script" />
+			<p:menuitem value="Anleitung" onclick="window.location.href='#'" icon="ui-icon-help" />
 		</p:tabMenu>
 	</h:form>
 
@@ -56,7 +56,7 @@
 		<br></br>
 		<br></br>
 
-		<p:commandButton value="verfügbare Räume anzeigen" />
+		<p:commandButton value="verfügbare Räume anzeigen" onclick="window.location.href='available.xhtml'"/>
 	</h:form>
 
 </h:body>
