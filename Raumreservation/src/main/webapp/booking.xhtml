@@ -4,21 +4,25 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-	<link rel="stylesheet" href="style.css" type="text/css"></link>
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/> -->
+	<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css"/>
+	
 </h:head>
 
 <h:body>
 
 	<h:form>
 		<p:tabMenu activeIndex="0">
-			<p:menuitem value="Neue Buchung" icon="ui-icon-plusthick" />
+			<p:menuitem value="Neue Buchung" icon="fa fa-bed" />
 			<p:menuitem value="Buchung bearbeiten" icon="ui-icon-gear" />
 			<p:menuitem value="Historie" icon="ui-icon-script" />
 			<p:menuitem value="Anleitung" icon="ui-icon-help" />
 		</p:tabMenu>
 	</h:form>
 
-	<h1>Raumreservation test Git</h1>
+	<h1>Raumreservation</h1>
+	<br></br>
 
 	<h:form id="form">
 		<p:growl id="msgs" showDetail="true" />
@@ -31,31 +35,26 @@
 
 
 			<p:outputLabel for="raumart" value="Raumart:" />
-			<p:selectOneMenu id="raumart" value="#{selectOneMenuView.raumart}"
-				style="width:250px">
-				<f:selectItem itemLabel="Bitte wählen" itemValue="" />
-				<f:selectItem itemLabel="Sitzungszimmer (Meeting)"
-					itemValue="Sitzungszimmer (Meeting)" />
+			<p:selectOneListbox id="raumart" value="#{selectOneMenuView.raumart}" style="width:250px">
+				<f:selectItem itemLabel="Sitzungszimmer (Meeting)" itemValue="Sitzungszimmer (Meeting)" />
 				<f:selectItem itemLabel="Showroom" itemValue="Showroom" />
-				<f:selectItem itemLabel="Veranstaltungsraum"
-					itemValue="Veranstaltungsraum" />
-				<f:selectItem itemLabel="buchbare Arbeitsräume"
-					itemValue="buchbare Arbeitsräume" />
+				<f:selectItem itemLabel="Veranstaltungsraum" itemValue="Veranstaltungsraum" />
+				<f:selectItem itemLabel="buchbare Arbeitsräume" itemValue="buchbare Arbeitsräume" />
 				<f:selectItem itemLabel="Aula" itemValue="Aula" />
-			</p:selectOneMenu>
+			</p:selectOneListbox>
 
 			<p:outputLabel for="raumgroesse" value="Raumgrösse:" />
-			<p:selectOneMenu id="raumgroesse"
-				value="#{selectOneMenuView.raumgroesse}" style="width:250px">
-				<f:selectItem itemLabel="Bitte wählen" itemValue="" />
-				<f:selectItem itemLabel="1-5 Personen" itemValue="1-5 Personen" />
-				<f:selectItem itemLabel="5-10 Personen" itemValue="5-10 Personen" />
+			<p:selectOneListbox id="raumgroesse" value="#{selectOneMenuView.raumgroesse}" style="width:250px">
+				<f:selectItem itemLabel="1-5   Personen" itemValue="1-5   Personen" />
+				<f:selectItem itemLabel="5-10  Personen" itemValue="5-10  Personen" />
 				<f:selectItem itemLabel="10-15 Personen" itemValue="10-15 Personen" />
 				<f:selectItem itemLabel="15-20 Personen" itemValue="15-20 Personen" />
-				<f:selectItem itemLabel="20+ Personen" itemValue="20+ Personen" />
-			</p:selectOneMenu>
+				<f:selectItem itemLabel="20+   Personen" itemValue="20+   Personen" />
+			</p:selectOneListbox>
 		</h:panelGrid>
 
+		<br></br>
+		<br></br>
 
 		<p:commandButton value="verfügbare Räume anzeigen" />
 	</h:form>
