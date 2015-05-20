@@ -21,7 +21,7 @@
         http://xmlns.jcp.org/xml/ns/persistence
         http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
    <persistence-unit name="primary">
-   	<jta-data-source>java:jboss/datasources/Reservation</jta-data-source>
+   	<jta-data-source>java:jboss/datasources/2HEED</jta-data-source>
       <!-- If you are running in a production environment, add a managed 
          data source, this example data source is just for development and testing! -->
       <!-- The datasource is deployed as WEB-INF/Raumreservation-ds.xml, you
